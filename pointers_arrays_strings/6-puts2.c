@@ -7,6 +7,7 @@
 void puts2(char *str)
 {
 	char* p = str;
+	char c = '\n';
 	int n = 0;
 	
 	while (*p != '\0')
@@ -16,4 +17,6 @@ void puts2(char *str)
 		n++;
 		p++;
 	}
+
+	write(1, &c, 1);
 }
