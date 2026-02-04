@@ -2,7 +2,8 @@
 #include <unistd.h>
 
 /**
- * puts2 - write only even numbers
+ * puts2 - write only every other char
+ * @str: string to print
  */
 void puts2(char *str)
 {
