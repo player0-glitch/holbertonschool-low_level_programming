@@ -7,13 +7,13 @@
 void puts2(char *str)
 {
 	char* p = str;
-	int n;
+	int n = 0;
 	
 	while (*p != '\0')
 	{
-		n = (int)*p;
 		if (n % 2 == 0)
-			write(1, &n, 1);
+			write(1, p, 1);
+		n++;
 		p++;
 	}
 }
