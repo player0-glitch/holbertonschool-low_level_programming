@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 
 /**
  * _strstr - finds the first occurence of a substring
@@ -16,7 +17,7 @@ char *_strstr(char *haystack, char *needle)
 	if (*needle == '\0')
 		return (haystack);
 
-	for (; haystack != '\0'; haystack++)
+	for (; *haystack != '\0'; haystack++)
 	{
 		h = haystack;
 		n = needle;
