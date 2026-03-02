@@ -1,6 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
-/**
- * print_rev - write string in reverse using pointers
+/** 
+ * main - check the code 
+ *
+ * Return: Always o
  */
-void print_rev(char *s) {}
+int main(void)
+{
+	char *s = "hello world";
+	char *f =  "world";
+	char *t;
+
+	t = _strbrk(s,f);
+	printf("%s\n", t);
+	return (0);
+}
