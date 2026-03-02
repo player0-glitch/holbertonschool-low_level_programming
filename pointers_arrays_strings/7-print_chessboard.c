@@ -18,6 +18,6 @@ void print_chessboard(char *a)
 		{
 			_putchar(a[s1 * 8 + s2]);
 		}
-		_putchar("\n");
+		_putchar('\n');
 	}
 }
