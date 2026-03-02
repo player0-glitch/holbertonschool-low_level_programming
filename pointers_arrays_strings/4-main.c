@@ -1,8 +1,8 @@
 #include "main.h"
 #include <stdio.h>
 
-/** 
- * main - check the code 
+/**
+ * main - check the code
  *
  * Return: Always o
  */
@@ -12,7 +12,7 @@ int main(void)
 	char *f =  "world";
 	char *t;
 
-	t = _strbrk(s,f);
+	t = _strbrk(s, f);
 	printf("%s\n", t);
 	return (0);
 }

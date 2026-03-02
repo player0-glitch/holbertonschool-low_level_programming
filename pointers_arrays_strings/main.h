@@ -21,4 +21,5 @@ char *string_toupper(char *str);
 char *_strbrk(char *s,char *accept);
 char *_strstr(char *haystack, char *accept);
 void print_chessboard(char *a);
+void print_diagsums(int *a, int size);
 #endif
