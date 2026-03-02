@@ -9,19 +9,18 @@
  */
 void print_diagsums(int *a, int size)
 {
-  int i;
-  int sum = 0;
-  
-  for (i = 0; i < size; i++)
-  {
-    /* diag 1 */
-    sum += a[i][i];
+	int i;
+	int sum = 0;
 
-    /* diag 2 */
-    sum += a[i][size - i - 1];
-  }
+	for (i = 0; i < size; i++)
+	{
+		/* diag 1 */
+		sum += a[i][i];
 
-  /* if the array is of size 2n+1 */
-  if (size % 2 != 0)
-    sum -= a[size / 2][size / 2];
+		/* diag 2 */
+		sum += a[i][size - i - 1];
+	}
+	/* if the array is of size 2n+1 */
+	if (size % 2 != 0)
+		sum -= a[size / 2][size / 2];
 }
