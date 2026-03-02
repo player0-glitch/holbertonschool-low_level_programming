@@ -19,4 +19,6 @@ void reverse_array(int *a, int n);
 char *string_toupper(char *str);
 /* More Pointers Arrays and Strings */
 char *_strbrk(char *s,char *accept);
+char *_strstr(char *haystack, char *accept);
+void print_chessboard(char *a);
 #endif
