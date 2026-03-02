@@ -22,11 +22,6 @@ void print_diagsums(int *a, int size)
 		/* diag 2 */
 		sum2 += a[i * size + (size - i - 1)];
 	}
-	/* if the array is of size 2n+1 */
-	if (size % 2 != 0)
-	{
-		sum1 -= a[size / 2 * size + (size / 2)];
-		sum2 -= a[size / 2 * size + (size / 2)];
-	}
-	printf("%d, %d", sum1, sum2);
+
+	printf("%d, %d\n", sum1, sum2);
 }
