@@ -3,10 +3,10 @@
 
 /**
  * main - check the code
- * 
+ *
  * Return: Always 0
  */
-int main (void)
+int main(void)
 {
   int r;
 
@@ -22,6 +22,6 @@ int main (void)
   printf("%d\n", r);
   r = _pow_recursion(-5, 3);
   printf("%d\n", r);
-  
+
   return (0);
 }

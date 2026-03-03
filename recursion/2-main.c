@@ -3,13 +3,13 @@
 
 /**
  * main - check the code
- * 
+ *
  * Return: Always 0
  */
-int main (void)
+int main(void)
 {
   int n;
-   
+
   n = _strlen_recursion("Cobin Colemane");
   printf("%d\n", n);
 
