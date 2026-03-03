@@ -10,10 +10,10 @@
  * Return: Always 0
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-  if (argc == 0)
-    exit(0);
-  printf("%s\n", argv[0]);
-  return (0);
+	if (argc == 0)
+		exit(0);
+	printf("%s\n", argv[0]);
+	return (0);
 }

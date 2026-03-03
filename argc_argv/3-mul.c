@@ -10,16 +10,17 @@
  * Return: Always 0
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-  int x, y; 
-  if (argc <= 2)
-    exit(0);
+	int x, y;
 
-  (void)argc;
-  x = atoi(argv[argc - 2]);
-  y = atoi(argv[argc - 1]);
+	if (argc <= 2)
+		exit(0);
 
-  printf("%d\n", x * y);
-  return (0);
+	(void)argc;
+	x = atoi(argv[argc - 2]);
+	y = atoi(argv[argc - 1]);
+
+	printf("%d\n", x * y);
+	return (0);
 }

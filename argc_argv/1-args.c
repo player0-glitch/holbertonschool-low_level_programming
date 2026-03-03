@@ -10,10 +10,10 @@
  * Return: Always 0
  */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
-  /* tell compiler to purposely ignore this variable*/
-  (void)argv;
-  printf("%d\n", (argc- 1));
-  return (0);
+	/* tell compiler to purposely ignore this variable*/
+	(void)argv;
+	printf("%d\n", (argc - 1));
+	return (0);
 }
