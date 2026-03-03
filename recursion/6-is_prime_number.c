@@ -9,13 +9,11 @@
  */
 int prime_helper(int n, int d)
 {
-  if (d * d > n)
-    return (1); /*no divisor, likely a prime*/
-
-  if (n % d == 0)
-    return (0); /*no prime exists here*/
-
-  return (prime_helper(n, d + 1));
+	if (d * d > n)
+		return (1); /*no divisor, likely a prime*/
+	if (n % d == 0)
+		return (0); /*no prime exists here*/
+	return (prime_helper(n, d + 1));
 }
 /**
  * is_prime_number - calculate if a number is a prime
@@ -25,8 +23,7 @@ int prime_helper(int n, int d)
  */
 int is_prime_number(int n)
 {
-  if (n <= 1)
-    return (0);
-
-  return (prime_helper(n, 2));
+	if (n <= 1)
+		return (0);
+	return (prime_helper(n, 2));
 }
