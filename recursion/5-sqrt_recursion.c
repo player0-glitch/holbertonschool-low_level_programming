@@ -10,11 +10,11 @@
  */
 int _sqrt(int n, int guesser)
 {
-  if (guesser * guesser > n)
-    return (-1);
-  else if (guesser * guesser == n)
-    return (guesser);
-  return (_sqrt(n, guesser + 1));
+	if (guesser * guesser > n)
+		return (-1);
+	else if (guesser * guesser == n)
+		return (guesser);
+	return (_sqrt(n, guesser + 1));
 }
 
 /**
@@ -26,9 +26,8 @@ int _sqrt(int n, int guesser)
  */
 int _sqrt_recursion(int n)
 {
-  if (n < 0)
-    return (-1);
-
-  return (_sqrt(n, 0));
+	if (n < 0)
+		return (-1);
+	return (_sqrt(n, 0));
 }
 
