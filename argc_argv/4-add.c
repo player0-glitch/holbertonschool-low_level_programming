@@ -21,7 +21,7 @@ int main(int argc, char *argv[])
 	{
 		/* convert char to int*/
 		arg = strtol(argv[i], &p, 10);
-		if (*p == '\0')
+		if (p == argv[i])
 		{
 			printf("Error\n");
 			exit(EXIT_SUCCESS);
