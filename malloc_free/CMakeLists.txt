@@ -13,14 +13,13 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # Files become a shared library
 file (GLOB SHARED_SRC
-  "_putschar.c" 
-  "0-puts_recursion.c"
-  "1-print_rev_recursion.c"
-  "2-strlen_recursion.c"
-  "3-factorial.c"
-  "4-pow_recursion.c"
-  "5-sqrt.c"
-  "6-prime.c"
+  "_putschar.c"
+  "0-create_array.c"
+  "1-strdup.c"
+  "2-str_concat.c"
+  "3-alloc_grid.c"
+:wa
+  "4-free_grid.c"
 )
 add_library(shared_lib STATIC ${SHARED_SRC})
 # All main files needed

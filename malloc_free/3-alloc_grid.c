@@ -1,0 +1,30 @@
+#include "main.h"
+#include <stdlib.h>
+/** 
+ * alloc_grid - allocate 2D array of chars
+ * @width: rows of the grid
+ * @height: columns of the grid
+ *
+ * Returns: pointer to the pointer of the first row;
+ */
+int **alloc_grid(int width,int height)
+{
+    int i, j;
+    int** head = NULL;
+    if (width == 0 || height == 0)
+        return NULL;
+
+   head = (int**)malloc(sizeof(int*) * width);
+    
+   if(head == NULL)
+       return NULL;
+
+   for(i = 0; i < width;i++){
+       head[i] = (int*)malloc(height * sizeof(int));
+       if(head[i] == NULL)
+           return NULL;
+       for (j = 0; j < height; j++)
+           head[i][j] = 0;
+   }
+    return head;
+}
