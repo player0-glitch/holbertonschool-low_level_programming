@@ -1,38 +1,37 @@
 #include "main.h"
 #include <stdlib.h>
-/** 
+/**
  * alloc_grid - allocate 2D array of chars
  * @width: rows of the grid
  * @height: columns of the grid
  *
  * Returns: pointer to the pointer of the first row;
  */
-int **alloc_grid(int width,int height)
-{
-    int i, j;
-    int** head = NULL;
-    if (width == 0 || height == 0)
-        return NULL;
+int **alloc_grid(int width, int height) {
+  int i, j;
+  int **head = NULL;
+  if (width < 1 || height < 1)
+    return (NULL);
 
-   head = (int**)malloc(sizeof(int*) * width);
-    
-   if(head == NULL)
-       return NULL;
+  head = (int **)malloc(sizeof(int *) * height);
 
-   for(i = 0; i < width;i++){
-       head[i] = (int*)malloc(height * sizeof(int));
-       if(head[i] == NULL)
-       {
-           for (j = 0; j < i; j++)
-               free(head[j]);
-       }
-       free(head);
-       return NULL;
-   }
-   /*All memory is properly  allocated*/ 
-   for( i = 0; i < width; i++)
-       for( j = 0; j < height; j++)
-          head[i][j] = 0; 
+  if (head == NULL)
+    return (NULL);
 
-    return head;
+  for (i = 0; i < height; i++) {
+    head[i] = (int *)malloc(width * sizeof(int));
+    if (head[i] == NULL) {
+      for (j = 0; j < i; j++)
+        free(head[j]);
+
+      free(head);
+      return (NULL);
+    }
+  }
+  /*All memory is properly  allocated*/
+  for (i = 0; i < height; i++)
+    for (j = 0; j < width; j++)
+      head[i][j] = 0;
+
+  return (head);
 }

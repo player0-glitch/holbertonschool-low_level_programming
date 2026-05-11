@@ -6,16 +6,12 @@
  * @grid: pointer to the start of the array
  * @height: basically number of columns
  */
-void free_grid(int **grid, int height) 
-{
-  int i, j;
-  if (grid == NULL)
+void free_grid(int **grid, int height) {
+  int idx;
+  if (height < 1 || grid == NULL)
     return;
 
-  for(i = 0; i < height; ++i)
-  {
-      free(grid[i]);
-  }
+  for (idx = 0; idx < height; idx++)
+    free(grid[idx]);
   free(grid);
-  grid = NULL;
 }

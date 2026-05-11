@@ -1,63 +1,16 @@
-# Trying to have most styles match betty
-BasedOnStyle: GNU 
-
-# Space around operators (a + b)
-SpaceBeforeAssignmentOperators: true
-SpaceAroundConditions: true
-PointerAlignment: Right
-DerivePointerAlignment: flase
-Standard: Cpp03
-
-SpaceAfterComma: true
-IndentCaseLabels: true
-
-IndentWidth: 4
+BasedOnStyle: LLVM 
+BreakBeforeBraces: GNU
+IndentWidth: 2
 UseTab: Never
-TabWidth: 4
-ColumnLimit: 80
-
-AllowShortFunctionsOnASingleLine: None
-AllowShortIfStatementsOnASingleLine: Never
-AllowShortLoopsOnASingleLine: false
-AllowShortBlocksOnASingleLine: Never
-
-BreakBeforeBraces: Allman
-
-BraceWrapping:
-  AfterControlStatement: true
-  AfterFunction: false
-  AfterStruct: true
-  AfterUnion: true
-  AfterEnum: true
-  BeforeElse: true
-  SplitEmptyFunction: true
-  SplitEmptyRecord: true
-  SplitEmptyNamespace: true
-
-PointerAlignment: Right
-
-SpaceBeforeParens: ControlStatements
-
-SpacesInParentheses: false
-SpacesInSquareBrackets: false
-
+TabWidth: 2
+ContinuationIndentWidth: 2
 IndentCaseLabels: true
+AlwaysBreakAfterReturnType: None
 
-BinPackArguments: false
-BinPackParameters: false
+# EmptyLineAfterAccessModifier: true
+# AllowShortFunctionOnASingleLine: None
+IndentCaseBlocks: true
+AlignAfterOpenBracket: Align
+ColumnLimit: 80
+# Standard: Cpp03
 
-AlignConsecutiveAssignments: false
-AlignConsecutiveDeclarations: false
-
-AlignOperands: true
-
-KeepEmptyLinesAtTheStartOfBlocks: false
-MaxEmptyLinesToKeep: 1
-
-SortIncludes: false
-
-IndentPPDirectives: None
-
-DerivePointerAlignment: false
-
-PenaltyBreakBeforeFirstCallParameter: 1000
