@@ -18,7 +18,6 @@ file (GLOB SHARED_SRC
   "1-strdup.c"
   "2-str_concat.c"
   "3-alloc_grid.c"
-:wa
   "4-free_grid.c"
 )
 add_library(shared_lib STATIC ${SHARED_SRC})

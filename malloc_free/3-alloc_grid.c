@@ -22,9 +22,17 @@ int **alloc_grid(int width,int height)
    for(i = 0; i < width;i++){
        head[i] = (int*)malloc(height * sizeof(int));
        if(head[i] == NULL)
-           return NULL;
-       for (j = 0; j < height; j++)
-           head[i][j] = 0;
+       {
+           for (j = 0; j < i; j++)
+               free(head[j]);
+       }
+       free(head);
+       return NULL;
    }
+   /*All memory is properly  allocated*/ 
+   for( i = 0; i < width; i++)
+       for( j = 0; j < height; j++)
+          head[i][j] = 0; 
+
     return head;
 }
