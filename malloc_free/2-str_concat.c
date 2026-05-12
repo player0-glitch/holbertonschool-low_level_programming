@@ -12,12 +12,18 @@
 char *str_concat(char *s1, char *s2)
 {
 	size_t l1, l2;
+	char *p;
+	char *q;
 	char *ret;
 
 	if (s1 == NULL || s2 == NULL)
 		return (NULL);
-	l1 = strlen(s1);
-	l2 = strlen(s2);
+	p = s1;
+	q = s2;
+	while (*p++)
+		l1++;
+	while (*q++)
+		l2++;
 	ret = (char *)malloc((l1 + l2) + 1);
 
 	/*Null Safety check*/
