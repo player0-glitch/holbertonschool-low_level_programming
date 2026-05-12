@@ -18,13 +18,14 @@ char *_strdup(char *str)
 	dest = str;
 	while (*dest++)
 		len++;
-	dest = (char *)malloc(len * sizeof(char));
+	dest = (char *)malloc(len + 1);
 
 	/*incase OS fails to give memory*/
 	if (dest == NULL)
 		return (NULL);
 
-	memcpy(dest, str, len);
-	/* dest[(len + 1)] = '\0'; */
+	char *d = dest;
+	while ((*d++ = *str++))
+		;
 	return (dest);
 }
