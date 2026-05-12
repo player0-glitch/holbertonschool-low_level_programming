@@ -20,19 +20,17 @@ int **alloc_grid(int width, int height)
 
 	if (head == NULL)
 		return (NULL);
-
 	for (i = 0; i < height; i++)
+	{
+		head[i] = (int *)malloc(width * sizeof(int));
+		if (head[i] == NULL)
 		{
-			head[i] = (int *)malloc(width * sizeof(int));
-			if (head[i] == NULL)
-				{
-					for (j = 0; j < i; j++)
-						free(head[j]);
-
-					free(head);
-					return (NULL);
-				}
+			for (j = 0; j < i; j++)
+				free(head[j]);
+			free(head);
+			return (NULL);
 		}
+	}
 	/*All memory is properly  allocated*/
 	for (i = 0; i < height; i++)
 		for (j = 0; j < width; j++)
