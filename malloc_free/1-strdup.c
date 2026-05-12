@@ -24,7 +24,6 @@ char *_strdup(char *str)
 	/*incase OS fails to give memory*/
 	if (dest == NULL)
 		return (NULL);
-
 	d = dest;
 	while (*str != '\0')
 		{
