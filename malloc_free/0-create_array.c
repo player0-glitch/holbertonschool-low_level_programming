@@ -12,18 +12,17 @@
  */
 char *create_array(unsigned int size, char c)
 {
-  int i;
+	int i;
+	char *arr = NULL;
 
-  char *arr = NULL;
+	if (size == 0)
+		return (NULL);
+	arr = (char *)malloc(size * sizeof(c));
 
-  if (size == 0)
-    return (NULL);
-  arr = (char *)malloc(size * sizeof(c));
-  /* Null safety checks */
-  if (!arr)
-    return (NULL);
+	if (!arr)
+		return (NULL);
 
-  for (i = 0; i < size - 1; i++)
-    arr[i] = c;
-  return (arr);
+	for (i = 0; i < size - 1; i++)
+		arr[i] = c;
+	return (arr);
 }
