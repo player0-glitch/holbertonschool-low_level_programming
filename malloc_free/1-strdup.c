@@ -25,7 +25,12 @@ char *_strdup(char *str)
 		return (NULL);
 
 	char *d = dest;
-	while ((*d++ = *str++))
-		;
+	while (*str != '\0')
+		{
+			*d = *str;
+			d++;
+			str++;
+		}
+	*d = '\0';
 	return (dest);
 }
