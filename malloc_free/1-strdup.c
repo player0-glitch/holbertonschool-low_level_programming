@@ -10,6 +10,7 @@
  */
 char *_strdup(char *str)
 {
+	char *d;
 	char *dest = NULL;
 	size_t len = 0;
 
@@ -24,7 +25,7 @@ char *_strdup(char *str)
 	if (dest == NULL)
 		return (NULL);
 
-	char *d = dest;
+	d = dest;
 	while (*str != '\0')
 		{
 			*d = *str;
