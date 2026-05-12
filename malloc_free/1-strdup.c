@@ -10,18 +10,18 @@
  */
 char *_strdup(char *str)
 {
-  char *dest = NULL;
-  size_t len = strlen(str);
+	char *dest = NULL;
+	size_t len = strlen(str);
 
-  if (str == NULL)
-    return (NULL);
-  dest = (char *)malloc(len * sizeof(str));
+	if (str == NULL)
+		return (NULL);
+	dest = (char *)malloc(len * sizeof(str));
 
-  /*incase OS fails to give memory*/
-  if (dest == NULL)
-    return (NULL);
+	/*incase OS fails to give memory*/
+	if (dest == NULL)
+		return (NULL);
 
-  memcpy(dest, str, len);
+	memcpy(dest, str, len);
 
-  return (dest);
+	return (dest);
 }
