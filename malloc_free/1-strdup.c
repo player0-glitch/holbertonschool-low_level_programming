@@ -6,7 +6,7 @@
  * _strdup - should return duplicate string
  * @str: string to duplicate
  *
- * Returns: copied string
+ * Return: copied string
  */
 char *_strdup(char *str)
 {

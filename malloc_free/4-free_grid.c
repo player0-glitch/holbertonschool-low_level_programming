@@ -6,8 +6,10 @@
  * @grid: pointer to the start of the array
  * @height: basically number of columns
  */
-void free_grid(int **grid, int height) {
+void free_grid(int **grid, int height)
+{
   int idx;
+
   if (height < 1 || grid == NULL)
     return;
 

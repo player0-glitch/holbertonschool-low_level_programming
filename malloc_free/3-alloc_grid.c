@@ -5,10 +5,12 @@
  * @width: rows of the grid
  * @height: columns of the grid
  *
- * Returns: pointer to the pointer of the first row;
+ * Return: pointer to the pointer of the first row;
  */
-int **alloc_grid(int width, int height) {
+int **alloc_grid(int width, int height)
+{
   int i, j;
+
   int **head = NULL;
   if (width < 1 || height < 1)
     return (NULL);
@@ -18,16 +20,18 @@ int **alloc_grid(int width, int height) {
   if (head == NULL)
     return (NULL);
 
-  for (i = 0; i < height; i++) {
-    head[i] = (int *)malloc(width * sizeof(int));
-    if (head[i] == NULL) {
-      for (j = 0; j < i; j++)
-        free(head[j]);
+  for (i = 0; i < height; i++)
+    {
+      head[i] = (int *)malloc(width * sizeof(int));
+      if (head[i] == NULL)
+        {
+          for (j = 0; j < i; j++)
+            free(head[j]);
 
-      free(head);
-      return (NULL);
+          free(head);
+          return (NULL);
+        }
     }
-  }
   /*All memory is properly  allocated*/
   for (i = 0; i < height; i++)
     for (j = 0; j < width; j++)

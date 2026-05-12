@@ -7,19 +7,23 @@
  *
  * @size: size of the array
  * @c: chars to fill the array
+ *
+ * Return: pointer to the start of the array
  */
-char *create_array(unsigned int size, char c) {
+char *create_array(unsigned int size, char c)
+{
   int i;
+
   char *arr = NULL;
 
   if (size == 0)
-    return NULL;
+    return (NULL);
   arr = (char *)malloc(size * sizeof(c));
   /* Null safety checks */
   if (!arr)
-    return NULL;
+    return (NULL);
 
   for (i = 0; i < size - 1; i++)
     arr[i] = c;
-  return arr;
+  return (arr);
 }
