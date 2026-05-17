@@ -6,6 +6,13 @@ struct dog
 	const char *owner;
 	const char *name;
 };
+/**
+ * init_dog - constructor of the dog struct
+ * @d: pointer to struct
+ * @name: to be set for the dog struct
+ * @age: age for dog struct
+ * @owner: name of the dog struct
+ */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
 	d->name = name;
