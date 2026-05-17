@@ -22,11 +22,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	/*since we can't use calloc*/
-	filter = ret;
+	filter = (uint8_t *)ret;
 	for (i = 0; i < nmemb; i++)
 		filter[i] = 0;
 
 	/*we need to return a void*)*/
-	ret = (void *)filter;
 	return (ret);
 }
