@@ -17,13 +17,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size < 1 || nmemb < 1)
 		return (NULL);
-	ret = (uint8_t *)malloc(nmemb * sizeof(size));
+	ret = (uint8_t *)malloc(nmemb * size);
 	if (!ret)
 		return (NULL);
 
 	/*since we can't use calloc*/
 	filter = (uint8_t *)ret;
-	for (i = 0; i < nmemb; i++)
+	for (i = 0; i < (nmemb * size); i++)
 		filter[i] = 0;
 
 	/*we need to return a void*)*/
