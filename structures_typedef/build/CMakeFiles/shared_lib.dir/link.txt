@@ -1,0 +1,2 @@
+/usr/bin/ar qc libshared_lib.a "CMakeFiles/shared_lib.dir/1-init_dog.c.o" "CMakeFiles/shared_lib.dir/2-print_dog.c.o" "CMakeFiles/shared_lib.dir/4-new_dog.c.o" "CMakeFiles/shared_lib.dir/5-free_dog.c.o"
+/usr/bin/ranlib libshared_lib.a

@@ -1,0 +1,1 @@
+/usr/lib64/ccache/cc -Wl,--dependency-file=CMakeFiles/4-main.dir/link.d "CMakeFiles/4-main.dir/4-main.c.o" -o 4-main  libshared_lib.a
