@@ -11,8 +11,8 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	uint8_t *ret;
-
+	void *ret;
+	uint8_t *filter;
 	unsigned int i;
 
 	if (size < 1 || nmemb < 1)
@@ -22,10 +22,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 
 	/*since we can't use calloc*/
+	filter = ret;
 	for (i = 0; i < nmemb; i++)
-		ret[i] = 0;
+		filter[i] = 0;
 
 	/*we need to return a void*)*/
-	ret = (void *)ret;
+	ret = (void *)filter;
 	return (ret);
 }
