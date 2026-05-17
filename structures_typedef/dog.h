@@ -3,8 +3,8 @@
 typedef struct
 {
 	float age;
-	const char *owner;
-	const char *name;
+	char *owner;
+	char *name;
 } dog_t;
 
 void init_dog(dog_t *d, char *name, float age, char *owner);
