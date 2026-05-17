@@ -12,10 +12,13 @@ set(CMAKE_C_EXTENSIONS ON)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 
 # Files become a shared library
-# file (GLOB SHARED_SRC
-#   "_putschar.c"
-# )
-# add_library(shared_lib STATIC ${SHARED_SRC})
+file (GLOB SHARED_SRC
+  "1-init_dog.c"
+  "2-print_dog.c"
+  "4-new_dog.c"
+  "5-free_dog.c"
+)
+add_library(shared_lib STATIC ${SHARED_SRC})
 # All main files needed
 file(
   GLOB
@@ -26,7 +29,7 @@ foreach(main_files ${MAIN_FILES})
   get_filename_component(target_name ${main_files} NAME_WE)
   add_executable(${target_name} ${main_files})
 
-  # target_link_libraries(${target_name} PRIVATE shared_lib)
+  target_link_libraries(${target_name} PRIVATE shared_lib)
   target_compile_options(${target_name} PRIVATE -Wall -pedantic -Werror -Wextra -std=gnu89 )
 endforeach()
 # target_include_directories(${PROJECT_NAME}PRIVATE ${CMAKE_SOURCE_DIR})
