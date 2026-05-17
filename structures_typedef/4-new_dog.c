@@ -21,7 +21,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	/*Allocate memory for the name so that you don't point
 	 * to the same location of memory*/
-	name_len = strlen(name) + 1;
+	name_len = get_str_len(name);
 	dog->name = (char *)malloc(sizeof(char *) * (name_len));
 
 	/*this could fail, fix any errors*/
@@ -31,7 +31,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 	/*Same story for the owner*/
-	owner_len = strlen(owner) + 1;
+	owner_len = get_str_len(owner);
 	dog->owner = (char *)malloc(sizeof(char *) * owner_len);
 	if (!dog->owner)
 		{
@@ -44,4 +44,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 	strcpy(dog->name, name);
 	strcpy(dog->owner, owner);
 	return (dog);
+}
+
+size_t get_str_len(char *str)
+{
+	size_t l = 0;
+	if (!str)
+		return (0);
+	while (str[l] != '\0')
+		l++;
+	return (1 + l);
 }
