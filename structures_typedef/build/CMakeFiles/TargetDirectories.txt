@@ -1,0 +1,9 @@
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/shared_lib.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/0-main.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/1-main.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/2-main.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/3-main.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/4-main.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/5-main.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/edit_cache.dir
+/home/tlhalefomokhadi/Documents/Github/holbertonschool-low_level_programming/structures_typedef/build/CMakeFiles/rebuild_cache.dir
