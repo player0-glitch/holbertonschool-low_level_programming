@@ -10,15 +10,20 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *ret = NULL;
+	int *ret = NULL;
+	unsigned int i;
 
 	if (size < 1 || nmemb < 1)
 		return (NULL);
-	ret = malloc(nmemb * sizeof(size));
+	ret = (int *)malloc(nmemb * sizeof(size));
 	if (!ret)
 		return (NULL);
 
 	/*since we can't use calloc*/
-	memset(ret, 0, size);
+	for (i = 0; i < nmemb; i++)
+		ret[i] = 0;
+
+	/*we need to return a void*)*/
+	ret = (void *)ret;
 	return (ret);
 }
