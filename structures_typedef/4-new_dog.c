@@ -21,8 +21,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	/*Allocate memory for the name so that you don't point
 	 * to the same location of memory*/
-	name_len = get_str_len(name);
-	dog->name = (char *)malloc(sizeof(char *) * (name_len));
+	while (name[name_len] != '\0')
+		name_len++;
+
+	dog->name = (char *)malloc(sizeof(char *) * (name_len + 1));
 
 	/*this could fail, fix any errors*/
 	if (!dog->name)
@@ -31,8 +33,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 	/*Same story for the owner*/
-	owner_len = get_str_len(owner);
-	dog->owner = (char *)malloc(sizeof(char *) * owner_len);
+	while (owner[owner_len] != '\0')
+		owner_len++;
+
+	dog->owner = (char *)malloc(sizeof(char *) * owner_len + 1);
 	if (!dog->owner)
 		{
 			free((char *)dog->name);
@@ -41,17 +45,18 @@ dog_t *new_dog(char *name, float age, char *owner)
 		}
 	/*Memory has been allocated so we can safely copy over
 	 * data we need into it*/
-	strcpy(dog->name, name);
-	strcpy(dog->owner, owner);
+	copy_str(dog->name, name);
+	copy_str(dog->owner, owner);
 	return (dog);
 }
 
-size_t get_str_len(char *str)
+void copy_str(char *d, char *s)
 {
-	size_t l = 0;
-	if (!str)
-		return (0);
-	while (str[l] != '\0')
-		l++;
-	return (1 + l);
+	int i = 0;
+	while (s[i] != '\0')
+		{
+			d[i] = s[i];
+			i++;
+		}
+	d[i] = '\0';
 }
