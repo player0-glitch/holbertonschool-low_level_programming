@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
@@ -8,6 +7,8 @@
  * @s1: first string to concat to
  * @s2: second string to concat from
  * @n: number of chars to concat from s2
+ *
+ * Return: a char pointer to the concated string
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
