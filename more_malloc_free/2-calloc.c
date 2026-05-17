@@ -1,5 +1,7 @@
 #include "main.h"
+#include <cstdlib>
 #include <stdlib.h>
+#include <string.h>
 
 /** _calloc- function to allocate  memory using malloc and zero'd out
  * @nmemb: members to be allocated for
@@ -13,8 +15,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	if (size < 1 || nmemb < 1)
 		return (NULL);
-	ret = calloc(nmemb, size);
+	ret = malloc(nmemb * sizeof(size));
 	if (!ret)
 		return (NULL);
+
+	/*since we can't use calloc*/
+	memset(ret, 0, size);
 	return (ret);
 }
