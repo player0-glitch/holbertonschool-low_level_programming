@@ -7,7 +7,7 @@
  * @age: age for dog struct
  * @owner: name of the dog struct
  */
-void init_dog(struct dog *d, char *name, float age, char *owner)
+void init_dog(dog_t *d, char *name, float age, char *owner)
 {
 	if (!d)
 		return;
