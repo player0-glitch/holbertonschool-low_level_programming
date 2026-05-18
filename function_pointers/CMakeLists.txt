@@ -14,10 +14,11 @@ set(CMAKE_C_STANDARD_REQUIRED ON)
 # Files become a shared library
 file (GLOB SHARED_SRC
   "_putschar.c"
-  "0-malloc_checked.c"
-  "1-string_nconcat.c"
-  "2-calloc.c"
-  "3-array_range.c"
+  "0-print_name.c"
+  "1-array_iterator.c"
+  "2-int_index.c"
+  "3-get_op_func.c"
+  "3-op_functions.c"
 )
 add_library(shared_lib STATIC ${SHARED_SRC})
 # All main files needed
