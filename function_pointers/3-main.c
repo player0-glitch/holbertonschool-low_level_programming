@@ -14,16 +14,19 @@ int main(int argc, char *argv[])
 
 	/*First get all the command line arguements*/
 	if (argc != 4)
-		exit(1);
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
+		exit(0);
+	a = (int)atoi(argv[1]);
+	b = (int)atoi(argv[3]);
 
 	my_math.op = argv[2];
 
 	my_math.f = get_op_func(my_math.op);
 
 	if (!my_math.f)
-		printf("Error\n");
+		{
+			printf("Error\n");
+			exit(0);
+		}
 	printf("%d\n", my_math.f(a, b));
 
 	return (0);
