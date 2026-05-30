@@ -2,6 +2,20 @@
 #include <string.h>
 
 /**
+ * _strlen -  length of a string
+ * @s: string to count length of
+ */
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
+}
+
+/**
  * add_node_end - add a new node at the end of the list
  * @head: pointer to the head of the list
  * @str: string to add to the end node
