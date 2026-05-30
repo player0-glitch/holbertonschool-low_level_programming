@@ -2,6 +2,20 @@
 #include <string.h>
 
 /**
+ * _strlen -  length of a string
+ * @s: string to count length of
+ */
+int _strlen(const char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+
+	return (i);
+}
+
+/**
  * add_node - adds a new node at the beginning of a list_t list
  * @head: double pointer to the head of the list
  * @str: string to be duplicated and stored in the new node
@@ -24,7 +38,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (str)
 		{
 			new_node->str = strdup(str);
-			new_node->len = strlen(str);
+			new_node->len = _strlen(str);
 
 			if (!(new_node->str))
 				{
