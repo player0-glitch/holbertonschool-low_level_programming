@@ -30,10 +30,14 @@ list_t *add_node(list_t **head, const char *str)
 		{
 			return (NULL);
 		}
+
 	/*create space for the new node*/
 	new_node = malloc(sizeof(list_t));
+
 	if (!new_node)
-		return (NULL);
+		{
+			return (NULL);
+		}
 
 	if (str)
 		{
