@@ -26,7 +26,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			if (*head)
 				(*head)->prev = NULL;
 			free(curr);
-			return (-1);
+			return (1);
 		}
 
 	/*Go to the index i am looking for*/
