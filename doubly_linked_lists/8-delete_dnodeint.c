@@ -30,14 +30,14 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		}
 
 	/*Go to the index i am looking for*/
-	while (curr->next && i < index)
+	while (curr->next != NULL && i < index)
 		{
 			curr = curr->next;
 			i++;
 		}
 
 	/*index is out of our bounds of the list*/
-	if (!curr)
+	if (curr == NULL)
 		return (-1);
 
 	if (curr->next)
