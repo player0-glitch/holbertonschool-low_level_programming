@@ -18,9 +18,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0' || value == NULL)
 		return (0);
-
 	idx = key_index((unsigned char *)key, ht->size);
-
 	/*Check for value at existing key and update it's value*/
 	node = ht->array[idx];
 	while (node)
@@ -30,8 +28,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 					new_val = strdup(value);
 					if (!new_val)
 						return (0);
-
-					/*clear memory before overwritting*/
 					free(node->value);
 					node->value = new_val;
 					return (1);
@@ -39,16 +35,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			/*Chain it to the link*/
 			node = node->next;
 		}
-
-	/*completely new key*/
 	new_node = malloc(sizeof(hash_node_t));
 	if (!new_node)
 		return (0);
-
 	new_node->key = strdup(key);
 	if (!new_node->key)
 		{
-			/*free the node we made since it can't hold null chars*/
 			free(new_node);
 			return (0);
 		}
@@ -59,7 +51,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			free(new_node);
 			return (0);
 		}
-
 	/*Handling hash collisions*/
 	new_node->next = ht->array[idx];
 	ht->array[idx] = new_node;
